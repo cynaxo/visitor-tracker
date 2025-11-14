@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Tracker - Suivi en temps réel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Visitor Tracker</h1>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-label">Visiteurs connectés</div>
+                    <div class="stat-value" id="visitor-count">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Avec localisation</div>
+                    <div class="stat-value" id="location-count">0</div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="map"></div>
+            <div class="info-panel">
+                <h2>Informations</h2>
+                <p>Ce microservice suit les visiteurs connectés en temps réel.</p>
+                <p>Votre localisation sera partagée automatiquement si vous l'autorisez.</p>
+                <div id="connection-status" class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span>Connexion...</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
