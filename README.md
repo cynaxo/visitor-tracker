@@ -22,3 +22,8 @@ Déployé séparément (par exemple via Docker ou Render), il peut servir plusie
 - API REST pour obtenir des informations (comme le nombre de visiteurs)
 
 - Microservice autonome, simple à déployer et réutilisable dans plusieurs applications
+
+## Structure du projet :
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/7d3cb611-46ff-4a36-89bf-33f2e31956ee" />
+
+
