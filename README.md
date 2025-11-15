@@ -227,3 +227,8 @@ Les paramètres de configuration peuvent être définis via des variables d'envi
 
 MIT
 
+
+## Photos 
+<img width="2789" height="1567" alt="image" src="https://github.com/user-attachments/assets/d52206ff-6b19-4892-875c-66f9105f9e80" />
+
+
