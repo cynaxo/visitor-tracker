@@ -123,8 +123,10 @@ function updateLocationCount() {
 function updateConnectionStatus(connected) {
     connectionStatusEl.classList.remove('connected', 'disconnected');
     connectionStatusEl.classList.add(connected ? 'connected' : 'disconnected');
-    connectionStatusEl.querySelector('span:last-child').textContent = 
-        connected ? 'Connecté' : 'Déconnecté';
+    const statusText = connectionStatusEl.querySelector('.status-text');
+    if (statusText) {
+        statusText.textContent = connected ? 'Connecté' : 'Déconnecté';
+    }
 }
 
 // Fonction pour demander la localisation de l'utilisateur
@@ -186,24 +188,24 @@ style.textContent = `
     }
     
     .marker-pulse {
-        width: 20px;
-        height: 20px;
+        width: 12px;
+        height: 12px;
         border-radius: 50%;
-        background: #667eea;
-        border: 3px solid white;
-        box-shadow: 0 0 0 0 rgba(102, 126, 234, 1);
+        background: #495057;
+        border: 2px solid #ffffff;
+        box-shadow: 0 0 0 0 rgba(73, 80, 87, 0.4);
         animation: markerPulse 2s infinite;
     }
     
     @keyframes markerPulse {
         0% {
-            box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+            box-shadow: 0 0 0 0 rgba(73, 80, 87, 0.4);
         }
         70% {
-            box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+            box-shadow: 0 0 0 8px rgba(73, 80, 87, 0);
         }
         100% {
-            box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+            box-shadow: 0 0 0 0 rgba(73, 80, 87, 0);
         }
     }
 `;

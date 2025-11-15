@@ -3,37 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visitor Tracker - Suivi en temps réel</title>
+    <title>Visitor Tracker - Microservice</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🌍 Visitor Tracker</h1>
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-label">Visiteurs connectés</div>
-                    <div class="stat-value" id="visitor-count">0</div>
+    <div class="microservice-container">
+        <header class="microservice-header">
+            <div class="header-content">
+                <h1 class="service-title">Visitor Tracker</h1>
+                <p class="service-subtitle">Microservice de suivi en temps réel</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Visiteurs actifs</div>
+                    <div class="metric-value" id="visitor-count">0</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-label">Avec localisation</div>
-                    <div class="stat-value" id="location-count">0</div>
+                <div class="metric-card">
+                    <div class="metric-label">Avec géolocalisation</div>
+                    <div class="metric-value" id="location-count">0</div>
                 </div>
             </div>
         </header>
 
-        <main>
-            <div id="map"></div>
-            <div class="info-panel">
-                <h2>Informations</h2>
-                <p>Ce microservice suit les visiteurs connectés en temps réel.</p>
-                <p>Votre localisation sera partagée automatiquement si vous l'autorisez.</p>
-                <div id="connection-status" class="status-indicator">
-                    <span class="status-dot"></span>
-                    <span>Connexion...</span>
+        <main class="microservice-main">
+            <section class="map-section">
+                <div class="map-container">
+                    <div id="map" class="map-view"></div>
                 </div>
-            </div>
+            </section>
+            
+            <aside class="service-sidebar">
+                <div class="sidebar-section">
+                    <h2 class="sidebar-title">État du service</h2>
+                    <div id="connection-status" class="connection-status">
+                        <span class="status-indicator-dot"></span>
+                        <span class="status-text">Connexion...</span>
+                    </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h2 class="sidebar-title">Informations</h2>
+                    <div class="info-content">
+                        <p class="info-text">Service de suivi des visiteurs connectés via WebSocket en temps réel.</p>
+                        <p class="info-text">La géolocalisation est partagée automatiquement si autorisée par le navigateur.</p>
+                    </div>
+                </div>
+            </aside>
         </main>
     </div>
 
